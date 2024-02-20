@@ -9,18 +9,10 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "prettier --write --cache . ",
-    "postinstall": "husky install",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --cache --fix"
-    ]
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
